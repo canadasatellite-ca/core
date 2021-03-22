@@ -20,7 +20,7 @@ final class OrderInterface {
 		# It seems that the website was incorrectly migrated to Magento 2 from another shopping cart,
 		# and order with ID < 32655 does not have associated records in the sales_order_payment table:
 		# https://github.com/canadasatellite-ca/site/issues/29#issuecomment-803590042
-		if (!$r && 32655 > $sb->getEntityId()) {
+		if (!$r && ($id = $sb->getEntityId()) && 32655 > $id) {
 			$r = df_new_omd(P::class, ['method' => 'checkmo']);
 			$r->setOrder($sb);
 		}
