@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<config
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:ObjectManager/etc/config.xsd'
+>
+<!-- 2021-03-25
+"Disable RSS for `Mageplaza_Blog` if the `rss/config/active` option is disabled":
+https://github.com/canadasatellite-ca/site/issues/43 -->
+	<type name='Mageplaza\Blog\Helper\Data'>
+		<plugin
+			name='CanadaSatellite\Core\Plugin\Mageplaza\Blog\Helper\Data'
+			type='CanadaSatellite\Core\Plugin\Mageplaza\Blog\Helper\Data'
+		/>
+	</type>
+</config>
