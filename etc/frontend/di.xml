@@ -12,4 +12,13 @@ https://github.com/canadasatellite-ca/site/issues/43 -->
 			type='CanadaSatellite\Core\Plugin\Mageplaza\Blog\Helper\Data'
 		/>
 	</type>
+<!-- 2021-03-25
+"Disable RSS for `Mageplaza_Blog` if the `rss/config/active` option is disabled":
+https://github.com/canadasatellite-ca/site/issues/43 -->
+	<type name='Magento\Rss\Controller\Feed'>
+		<plugin
+			name='CanadaSatellite\Core\Plugin\Magento\Rss\Controller\Feed'
+			type='CanadaSatellite\Core\Plugin\Magento\Rss\Controller\Feed'
+		/>
+	</type>
 </config>
