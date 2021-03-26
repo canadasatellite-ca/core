@@ -12,4 +12,11 @@ https://github.com/canadasatellite-ca/site/issues/29 -->
 			type='CanadaSatellite\Core\Plugin\Magento\Sales\Api\Data\OrderInterface'
 		/>
 	</type>
+<!-- 2021-03-26
+1) "«Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size»
+for `Magento\Catalog\Model\Indexer\Category\Product\Action\Full`": https://github.com/canadasatellite-ca/site/issues/47
+2) The problem is caused by the `we-are-virtua/magento2-search-fix` module: https://github.com/we-are-virtua/magento2-search-fix/blob/1.0.1/src/SearchFix/etc/di.xml#L3-L7 -->
+	<type name='Magento\Catalog\Model\Indexer\Category\Product\Action\Full'>
+		<arguments><argument name='batchRowsCount' xsi:type='number'>3000</argument></arguments>
+	</type>
 </config>
