@@ -3,6 +3,12 @@
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:ObjectManager/etc/config.xsd'
 >
+	<type name='Cart2Quote\DeskEmail\Observer\Frontend\SaveMessageAfterObserver'>
+		<plugin
+			name='CanadaSatellite\Core\Plugin\Cart2Quote\DeskEmail\Observer\Frontend\SaveMessageAfterObserver'
+			type='CanadaSatellite\Core\Plugin\Cart2Quote\DeskEmail\Observer\Frontend\SaveMessageAfterObserver'
+		/>
+	</type>
 <!-- 2021-03-25
 "Disable RSS for `Mageplaza_Blog` if the `rss/config/active` option is disabled":
 https://github.com/canadasatellite-ca/site/issues/43 -->
