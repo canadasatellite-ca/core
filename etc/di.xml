@@ -19,4 +19,13 @@ for `Magento\Catalog\Model\Indexer\Category\Product\Action\Full`": https://githu
 	<type name='Magento\Catalog\Model\Indexer\Category\Product\Action\Full'>
 		<arguments><argument name='batchRowsCount' xsi:type='number'>3000</argument></arguments>
 	</type>
+<!-- 2021-03-30
+"«Unable to unserialize value. Error: Syntax error» on `sales/order/history`»":
+https://github.com/canadasatellite-ca/site/issues/62 -->
+	<type name='Magento\Sales\Model\Order\Item'>
+		<plugin
+			name='CanadaSatellite\Core\Plugin\Magento\Sales\Model\Order\Item'
+			type='CanadaSatellite\Core\Plugin\Magento\Sales\Model\Order\Item'
+		/>
+	</type>
 </config>
