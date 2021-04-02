@@ -19,6 +19,17 @@ for `Magento\Catalog\Model\Indexer\Category\Product\Action\Full`": https://githu
 	<type name='Magento\Catalog\Model\Indexer\Category\Product\Action\Full'>
 		<arguments><argument name='batchRowsCount' xsi:type='number'>3000</argument></arguments>
 	</type>
+<!-- 2021-04-02
+1) "«Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size»
+for `Magento\Catalog\Model\Indexer\Product\Eav\Action\Full`": https://github.com/canadasatellite-ca/site/issues/69
+2) https://github.com/magento/magento2/blob/2.3.5-p2/app/code/Magento/Catalog/etc/di.xml#L1104-L1107
+3) https://devdocs.magento.com/guides/v2.3/extension-dev-guide/indexer-batch.html#batching-configuration -->
+	<type name='Magento\Catalog\Model\ResourceModel\Product\Indexer\Eav\BatchSizeCalculator'>
+		<arguments>
+			<argument name='decimal' xsi:type='number'>900</argument>
+			<argument name='source' xsi:type='number'>900</argument>
+		</arguments>
+	</type>
 <!-- 2021-03-30
 "«Unable to unserialize value. Error: Syntax error» on `sales/order/history`»":
 https://github.com/canadasatellite-ca/site/issues/62 -->

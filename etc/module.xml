@@ -4,10 +4,18 @@
     xsi:noNamespaceSchemaLocation='urn:magento:framework:Module/etc/module.xsd'
 >
 	<module name='CanadaSatellite_Core' setup_version='0.0.1'>
+		<sequence>
+<!-- 2021-04-02
+1) "«Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size»
+for `Magento\Catalog\Model\Indexer\Product\Eav\Action\Full`": https://github.com/canadasatellite-ca/site/issues/69
+2) https://github.com/magento/magento2/blob/2.3.5-p2/app/code/Magento/Catalog/etc/di.xml#L1104-L1107
+3) https://devdocs.magento.com/guides/v2.3/extension-dev-guide/indexer-batch.html#batching-configuration -->
+			<module name='Magento_Catalog'/>
 <!-- 2021-03-26
 1) "«Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size»
 for `Magento\Catalog\Model\Indexer\Category\Product\Action\Full`": https://github.com/canadasatellite-ca/site/issues/47
 2) The problem is caused by the `we-are-virtua/magento2-search-fix` module: https://github.com/we-are-virtua/magento2-search-fix/blob/1.0.1/src/SearchFix/etc/di.xml#L3-L7 -->
-		<sequence><module name='Virtua_SearchFix'/></sequence>
+			<module name='Virtua_SearchFix'/>
+		</sequence>
 	</module>
 </config>
