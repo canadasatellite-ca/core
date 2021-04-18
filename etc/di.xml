@@ -15,9 +15,12 @@ https://github.com/canadasatellite-ca/site/issues/29 -->
 <!-- 2021-03-26
 1) "«Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size»
 for `Magento\Catalog\Model\Indexer\Category\Product\Action\Full`": https://github.com/canadasatellite-ca/site/issues/47
-2) The problem is caused by the `we-are-virtua/magento2-search-fix` module: https://github.com/we-are-virtua/magento2-search-fix/blob/1.0.1/src/SearchFix/etc/di.xml#L3-L7 -->
+2) The problem is caused by the `we-are-virtua/magento2-search-fix` module: https://github.com/we-are-virtua/magento2-search-fix/blob/1.0.1/src/SearchFix/etc/di.xml#L3-L7
+2021-04-18
+The previous value was 3000 (since 2021-03-26): https://github.com/canadasatellite-ca/core/blob/0.1.2/etc/di.xml#L20
+It was too high, as the warning was occured again: https://github.com/canadasatellite-ca/site/issues/47#issuecomment-821950860 -->
 	<type name='Magento\Catalog\Model\Indexer\Category\Product\Action\Full'>
-		<arguments><argument name='batchRowsCount' xsi:type='number'>3000</argument></arguments>
+		<arguments><argument name='batchRowsCount' xsi:type='number'>600</argument></arguments>
 	</type>
 <!-- 2021-04-02
 1) "«Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size»
