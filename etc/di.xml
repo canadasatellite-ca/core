@@ -38,8 +38,10 @@ for `Magento\Catalog\Model\Indexer\Product\Eav\Action\Full`": https://github.com
 3) https://devdocs.magento.com/guides/v2.3/extension-dev-guide/indexer-batch.html#batching-configuration -->
 	<type name='Magento\Catalog\Model\ResourceModel\Product\Indexer\Eav\BatchSizeCalculator'>
 		<arguments>
-			<argument name='decimal' xsi:type='number'>900</argument>
-			<argument name='source' xsi:type='number'>900</argument>
+			<argument name='batchSizes' xsi:type='array'>
+				<item name='decimal' xsi:type='number'>900</item>
+				<item name='source' xsi:type='number'>900</item>
+			</argument>
 		</arguments>
 	</type>
 <!-- 2021-04-18 "Ban malicious bots": https://github.com/canadasatellite-ca/site/issues/72 -->
