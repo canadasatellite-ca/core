@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<page
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
+>
+<!-- 2021-06-03 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+1) «Broken reference: the 'checkout.cart.item.renderers.gift-card.actions.gift_options' element
+cannot be added as child to 'checkout.cart.item.renderers.gift-card.actions', because the latter doesn't exist»:
+https://github.com/canadasatellite-ca/site/issues/138
+2) The solution is similar to:
+	https://github.com/dxmoto/site/issues/65
+	https://github.com/dxmoto/site/issues/66
+	https://github.com/dxmoto/site/issues/73
+	https://github.com/dxmoto/site/issues/76
+	https://github.com/dxmoto/site/issues/77
+	https://github.com/dxmoto/site/issues/78
+	https://github.com/dxmoto/site/issues/79
+	https://github.com/dxmoto/site/issues/80
+	https://github.com/dxmoto/site/issues/81
+	https://github.com/dxmoto/site/issues/82
+	https://github.com/dxmoto/site/issues/83
+-->
+	<block name='checkout.cart.item.renderers.gift-card.actions'/>
+	<referenceBlock name='checkout.cart.item.renderers.gift-card.actions' remove='true'/>
+</page>
