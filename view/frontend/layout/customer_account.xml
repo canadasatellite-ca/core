@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+<page
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
+>
+<!-- 2021-06-03 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+«The frontend customer account menu shows 2 items as empty»: https://github.com/canadasatellite-ca/site/issues/119 -->
+	<referenceBlock name='customer-account-navigation-delimiter-1' remove='true'/>
+	<referenceBlock name='customer-account-navigation-delimiter-2' remove='true'/>
+</page>
