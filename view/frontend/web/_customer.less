@@ -1,4 +1,13 @@
 // 2021-08-23
-// "Remove dots from «My Orders» tabs on the frontend customer account page":
-// https://github.com/canadasatellite-ca/site/issues/200
-body.account li.nav {list-style-type: none;}
+body.account {
+	ul.order-links {
+		// 2021-08-23
+		// "Improve the «My Orders» tabs appearance on the frontend customer account page":
+		// https://github.com/canadasatellite-ca/site/issues/201
+		margin: 0; padding: 0;
+		// 2021-08-23
+		// "Remove dots from «My Orders» tabs on the frontend customer account page":
+		// https://github.com/canadasatellite-ca/site/issues/200
+		> li.nav {list-style-type: none;}
+	}
+}
