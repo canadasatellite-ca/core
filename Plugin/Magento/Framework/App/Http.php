@@ -15,6 +15,6 @@ final class Http {
 		&& df_request_o()->isPost()
 		&& 3 === count($a = df_request())
 		&& !array_diff(array_keys($a), ['form_key', 'product', 'uenc'])
-		? df_403() : $f()
+		? df_ban() : $f()
 	;}
 }
