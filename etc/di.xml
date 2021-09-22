@@ -44,6 +44,15 @@ for `Magento\Catalog\Model\Indexer\Product\Eav\Action\Full`": https://github.com
 			</argument>
 		</arguments>
 	</type>
+<!-- 2021-09-21
+"Temporary ban IP addresses of guest payers with `<…>@example.com` email addresses":
+https://github.com/canadasatellite-ca/core/issues/1 -->
+	<type name='Magento\Customer\Api\AccountManagementInterface'>
+		<plugin
+			name='CanadaSatellite\Core\Plugin\Magento\Customer\Api\AccountManagementInterface'
+			type='CanadaSatellite\Core\Plugin\Magento\Customer\Api\AccountManagementInterface'
+		/>
+	</type>
 <!-- 2021-04-18 "Ban malicious bots": https://github.com/canadasatellite-ca/site/issues/72 -->
 	<type name='Magento\Framework\App\Http'>
 		<plugin
