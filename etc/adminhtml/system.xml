@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+<config
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='urn:magento:module:Df_Config:etc/system_file.xsd'
+>
+<!-- 2021-09-24 -->
+    <system>
+        <tab id='canada_satellite' translate='label' sortOrder='-100'>
+            <label>CanadaSatellite</label>
+        </tab>
+    </system>
+</config>
