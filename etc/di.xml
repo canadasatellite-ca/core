@@ -3,15 +3,6 @@
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:ObjectManager/etc/config.xsd'
 >
-<!-- 2021-03-22
-"«Call to a member function getAdditionalInformation() on null in vendor/magento/module-sales/Model/OrderRepository.php:183»":
-https://github.com/canadasatellite-ca/site/issues/29 -->
-	<type name='Magento\Sales\Api\Data\OrderInterface'>
-		<plugin
-			name='CanadaSatellite\Core\Plugin\Magento\Sales\Api\Data\OrderInterface'
-			type='CanadaSatellite\Core\Plugin\Magento\Sales\Api\Data\OrderInterface'
-		/>
-	</type>
 <!-- 2021-03-26
 1) "«Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size»
 for `Magento\Catalog\Model\Indexer\Category\Product\Action\Full`": https://github.com/canadasatellite-ca/site/issues/47
@@ -58,6 +49,15 @@ https://github.com/canadasatellite-ca/core/issues/1 -->
 		<plugin
 			name='CanadaSatellite\Core\Plugin\Magento\Framework\App\Http'
 			type='CanadaSatellite\Core\Plugin\Magento\Framework\App\Http'
+		/>
+	</type>
+<!-- 2021-03-22
+"«Call to a member function getAdditionalInformation() on null in vendor/magento/module-sales/Model/OrderRepository.php:183»":
+https://github.com/canadasatellite-ca/site/issues/29 -->
+	<type name='Magento\Sales\Api\Data\OrderInterface'>
+		<plugin
+			name='CanadaSatellite\Core\Plugin\Magento\Sales\Api\Data\OrderInterface'
+			type='CanadaSatellite\Core\Plugin\Magento\Sales\Api\Data\OrderInterface'
 		/>
 	</type>
 <!-- 2021-03-30
