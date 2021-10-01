@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<config
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:Event/etc/events.xsd'
+>
+<!-- 2021-10-01
+1) "`MageWorx_OrderEditor`: «Call to a member function getParentItem() on null
+in vendor\magento\module-sales\view\adminhtml\templates\order\invoice\view\items.phtml:24»":
+https://github.com/canadasatellite-ca/site/issues/238
+2) "`MageWorx_OrderEditor`: «Call to a member function getId() on null in vendor\magento\module-tax\Helper\Data.php:733»":
+https://github.com/canadasatellite-ca/site/issues/239
+3) "`MageWorx_OrderEditor`: «Call to a member function getParentItem() on null
+in vendor/magento/module-bundle/Block/Adminhtml/Sales/Order/Items/Renderer.php:87»":
+https://github.com/canadasatellite-ca/site/issues/236
+4) "`MageWorx_OrderEditor`: «Argument 1 passed to Magento\Sales\Model\Order\Invoice\Item::setOrderItem()
+must be an instance of Magento\Sales\Model\Order\Item, null given,
+called in vendor/magento/module-sales/Model/ResourceModel/Order/Invoice/Relation.php on line 54»":
+https://github.com/canadasatellite-ca/site/issues/235 -->
+	<event name='sales_order_invoice_item_collection_load_after'>
+		<observer
+			instance='CanadaSatellite\Core\Observer\Sales\Order\Invoice\Item\Collection\LoadAfter'
+			name='CanadaSatellite\Core\Observer\Sales\Order\Invoice\Item\Collection\LoadAfter'
+		/>
+	</event>
+</config>

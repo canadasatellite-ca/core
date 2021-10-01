@@ -60,16 +60,6 @@ https://github.com/canadasatellite-ca/site/issues/29 -->
 			type='CanadaSatellite\Core\Plugin\Magento\Sales\Api\Data\OrderInterface'
 		/>
 	</type>
-<!-- 2021-10-01
-"`MageWorx_OrderEditor`: «Call to a member function getParentItem() on null
-in vendor\magento\module-sales\view\adminhtml\templates\order\invoice\view\items.phtml:24»":
-https://github.com/canadasatellite-ca/site/issues/238 -->
-	<type name='Magento\Sales\Model\Order\Invoice'>
-		<plugin
-			name='CanadaSatellite\Core\Plugin\Magento\Sales\Model\Order\Invoice'
-			type='CanadaSatellite\Core\Plugin\Magento\Sales\Model\Order\Invoice'
-		/>
-	</type>
 <!-- 2021-03-30
 "«Unable to unserialize value. Error: Syntax error» on `sales/order/history`»":
 https://github.com/canadasatellite-ca/site/issues/62 -->
