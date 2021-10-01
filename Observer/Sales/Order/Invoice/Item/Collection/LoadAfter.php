@@ -2,7 +2,8 @@
 namespace CanadaSatellite\Core\Observer\Sales\Order\Invoice\Item\Collection;
 use Magento\Framework\Event\Observer as O;
 use Magento\Framework\Event\ObserverInterface;
-use Magento\Sales\Model\Order\Invoice\Item as I;
+use Magento\Sales\Model\Order\Invoice\Item as II;
+use Magento\Sales\Model\Order\Item as OI;
 use Magento\Sales\Model\ResourceModel\Order\Invoice\Item\Collection as C;
 # 2021-10-01
 # 1) "`MageWorx_OrderEditor`: «Call to a member function getParentItem() on null
@@ -31,7 +32,16 @@ final class LoadAfter implements ObserverInterface {
 	function execute(O $o) {
 		/** 2021-10-01 @see \Magento\Sales\Model\ResourceModel\Order\Invoice\Item\Collection::$_eventObject */
 		$c = $o['order_invoice_item_collection']; /** @var C $c */
-		$ii = array_filter($c->getItems(), function(I $i) {return $i->getOrderItem();}); /** @var I[] $ii */
-		$c->removeAllItems()->setItems($ii);
+		$iia = array_filter($c->getItems(), function(II $ii) {return
+			# 2021-10-02
+			# `&& $oi->getId()` fixes the error:
+			# "`MageWorx_OrderEditor`:
+			# «Division by zero in vendor/magento/module-weee/Block/Item/Price/Renderer.php on line 213»":
+			# https://github.com/canadasatellite-ca/site/issues/240
+			# We can use `&& $oi->getQtyOrdered()` instead, because $oi->getData() has only `product_options`
+			# and do not have `entity_id` nor `qty_ordered`.
+			($oi = $ii->getOrderItem()) /** @var OI $oi */ && $oi->getId()
+		;}); /** @var II[] $iia */
+		$c->removeAllItems()->setItems($iia);
 	}
 }
