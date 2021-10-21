@@ -60,6 +60,17 @@ https://github.com/canadasatellite-ca/site/issues/29 -->
 			type='CanadaSatellite\Core\Plugin\Magento\Sales\Api\Data\OrderInterface'
 		/>
 	</type>
+<!-- 2021-10-20
+1) "All invoices between 2021-10-01 and 2021-10-09 do not have items":
+https://github.com/canadasatellite-ca/site/issues/256
+2) "«Card CVD is invalid» on `/index.php/api/auctane?action=shipnotify`":
+https://github.com/canadasatellite-ca/bambora/issues/12  -->
+	<type name='Magento\Sales\Model\Order'>
+		<plugin
+			name='CanadaSatellite\Core\Plugin\Magento\Sales\Model\Order'
+			type='CanadaSatellite\Core\Plugin\Magento\Sales\Model\Order'
+		/>
+	</type>
 <!-- 2021-03-30
 "«Unable to unserialize value. Error: Syntax error» on `sales/order/history`»":
 https://github.com/canadasatellite-ca/site/issues/62 -->
