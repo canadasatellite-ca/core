@@ -13,7 +13,7 @@ It was too high, as the warning was occured again: https://github.com/canadasate
 	<type name='Magento\Catalog\Model\Indexer\Category\Product\Action\Full'>
 		<arguments><argument name='batchRowsCount' xsi:type='number'>600</argument></arguments>
 	</type>
-<!-- 2021-05-01 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+<!-- 2021-05-01 Dmitry Fedyuk https://github.com/dmitrii-fediuk
 «Illegal offset type in vendor/magento/module-bundle/Block/Catalog/Product/View/Type/Bundle.php on line 194»:
 https://github.com/canadasatellite-ca/site/issues/83 -->
 	<type name='Magento\Catalog\Model\Product'>

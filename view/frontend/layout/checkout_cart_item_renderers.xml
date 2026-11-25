@@ -3,7 +3,7 @@
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
-<!-- 2021-06-03 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+<!-- 2021-06-03 Dmitry Fedyuk https://github.com/dmitrii-fediuk
 1) «Broken reference: the 'checkout.cart.item.renderers.gift-card.actions.gift_options' element
 cannot be added as child to 'checkout.cart.item.renderers.gift-card.actions', because the latter doesn't exist»:
 https://github.com/canadasatellite-ca/site/issues/138

@@ -16,7 +16,7 @@ final class OrderInterface {
 	 * @return IP
 	 */
 	function afterGetPayment(Sb $sb, IP $r = null) {
-    	# 2021-03-22 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+    	# 2021-03-22 Dmitry Fedyuk https://github.com/dmitrii-fediuk
 		# It seems that the website was incorrectly migrated to Magento 2 from another shopping cart,
 		# and order with ID < 32655 does not have associated records in the sales_order_payment table:
 		# https://github.com/canadasatellite-ca/site/issues/29#issuecomment-803590042

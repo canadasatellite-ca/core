@@ -3,7 +3,7 @@
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
-<!-- 2021-06-21 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+<!-- 2021-06-21 Dmitry Fedyuk https://github.com/dmitrii-fediuk
 1) «Broken reference: the 'product.reviews' element cannot be added as child to 'product_tabs',
 because the latter doesn't exist»: https://github.com/canadasatellite-ca/site/issues/178
 2) «Broken reference: the 'mageworx_downloads.attachment' element cannot be added as child to 'product_tabs',

@@ -4,7 +4,7 @@ use Cart2Quote\DeskEmail\Observer\Frontend\SaveMessageAfterObserver as Sb;
 use Cart2Quote\Desk\Model\Data\Ticket as T;
 use Magento\Contact\Model\ConfigInterface as C;
 use Magento\Framework\Event\Observer as O;
-# 2021-03-28 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+# 2021-03-28 Dmitry Fedyuk https://github.com/dmitrii-fediuk
 # "`Cart2Quote_DeskEmail`: «Argument 1 passed to Magento\Framework\Mail\AddressConverter::convertMany()
 # must be of the type array, null given, called in vendor/magento/framework/Mail/Template/TransportBuilder.php on line 431»":
 # https://github.com/canadasatellite-ca/site/issues/54

@@ -2,7 +2,7 @@
 namespace CanadaSatellite\Core\Plugin\Magento\Catalog\Model;
 use Magento\Catalog\Model\Product as Sb;
 use Magento\Framework\DataObject as _DO;
-# 2021-05-01 Dmitry Fedyuk https://www.upwork.com/fl/mage2pro
+# 2021-05-01 Dmitry Fedyuk https://github.com/dmitrii-fediuk
 # «Illegal offset type in vendor/magento/module-bundle/Block/Catalog/Product/View/Type/Bundle.php on line 194»:
 # https://github.com/canadasatellite-ca/site/issues/83
 final class Product {
